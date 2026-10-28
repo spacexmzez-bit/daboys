@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0d14">
+  <meta name="description" content="Daboys — keep hangout payments and temporary debts in check.">
+  <title>Daboys — Hangouts, handled.</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Main navigation">
+      <a href="#dashboard" class="brand" data-nav="dashboard" aria-label="Daboys dashboard">
+        <span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8.5 12 4l8 4.5v7L12 20l-8-4.5v-7Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m4 8.5 8 4.5 8-4.5M12 13v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        <span class="brand-text">da<span>boys</span><small>HANGOUTS, HANDLED.</small></span>
+      </a>
+      <div class="nav-caption">WORKSPACE</div>
+      <nav class="nav-links">
+        <button class="nav-link active" data-nav="dashboard" type="button"><span data-icon="grid"></span> Dashboard</button>
+        <button class="nav-link" data-nav="debts" type="button"><span data-icon="wallet"></span> Debts <span id="nav-debt-count" class="nav-pill" hidden>0</span></button>
+        <button class="nav-link" data-nav="settings" type="button"><span data-icon="users"></span> Members & Settings</button>
+      </nav>
+      <div class="sidebar-bottom"><span class="live-dot"></span> Stored on this device <div class="sidebar-small">Private, simple, no account needed.</div></div>
+    </aside>
+    <div class="main-column">
+      <header class="topbar"><div class="topbar-breadcrumb"><span>YOUR SPACE</span><span class="breadcrumb-divider">/</span><strong id="breadcrumb">Dashboard</strong></div><div class="topbar-right"><span class="currency-badge">🇸🇦 SAR</span><span class="avatar">DB</span></div></header>
+      <main id="main" class="content" tabindex="-1"></main>
+    </div>
+  </div>
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <button data-nav="dashboard" class="mobile-nav-item active" type="button"><span data-icon="grid"></span><span>Home</span></button>
+    <button data-nav="debts" class="mobile-nav-item" type="button"><span data-icon="wallet"></span><span>Debts</span></button>
+    <button data-nav="settings" class="mobile-nav-item" type="button"><span data-icon="users"></span><span>Members</span></button>
+  </nav>
+  <div id="modal-root"></div>
+  <div id="toast-root" role="status" aria-live="polite"></div>
+  <input type="file" id="import-file" accept="application/json,.json" hidden>
+</body>
+</html>
