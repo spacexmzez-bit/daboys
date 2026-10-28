@@ -1,6 +1,6 @@
 # Daboys
 
-A small, dark-themed hangout payment tracker built with **HTML, CSS, and vanilla JavaScript**. Currency: **Saudi riyals (SAR)**.
+A mobile-first, dark-themed hangout payment tracker built with **HTML, CSS, and vanilla JavaScript**. Currency: **Saudi riyals (SAR)**.
 
 ## Put it on GitHub Pages
 
@@ -31,6 +31,10 @@ You can also open `index.html` locally in a browser.
 - Settlements are entered manually. The app does **not** move money or connect to a bank.
 - Completing a hangout is irreversible; there is no archive.
 
+## Delete all data
+
+Open **Members & Settings → Danger zone → Delete all data**. There are two separate confirmation dialogs. The final one requires typing **`DELETE DABOYS`** exactly before the permanent deletion button becomes available. This removes every Daboys member, hangout, payment, and debt saved under this site in the current browser. **There is no undo.** It does not affect other websites or other devices.
+
 ## Data & backups
 
 **All app data is saved in your browser's `localStorage` on your device, not on GitHub or a remote server.** It persists across normal page reloads on the same browser and site origin, but **does not sync** between browsers or devices. Private/incognito browsing and clearing site data can remove it.
@@ -54,7 +58,7 @@ or a simple array:
 | File | Purpose |
 | --- | --- |
 | `index.html` | Page layout and navigation |
-| `styles.css` | Responsive dark theme |
+| `styles.css` | Mobile-first responsive dark theme |
 | `app.js` | Payment splitting, members, debts, storage, and interactions |
 
 No third-party scripts, fonts, frameworks, or tracking services are used.
