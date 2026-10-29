@@ -385,3 +385,17 @@ body{overflow-x:hidden}
  .topbar{padding:0 clamp(22px,4vw,66px)}
  .hangout-grid,.debt-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
+
+/* Dynamic membership: mobile-first touch controls and confirmation previews. */
+.crew-preview{display:grid;gap:10px;margin:14px 0 18px}
+.crew-preview>div{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border:1px solid #384155;background:#202638;border-radius:12px}
+.crew-preview span{color:#a8b4c8;font-size:12px}
+.crew-preview strong{color:#f4f7ff;text-align:right;font-size:13px}
+.remove-participant{min-height:40px;justify-content:center;width:100%;border-color:#58404d;color:#ffbac6}
+.payment-table td:nth-child(6){grid-column:1/-1}
+.payment-table td:nth-child(6)::before{content:none}
+@media(min-width:651px){
+ .payment-table{min-width:790px}
+ .payment-table td:nth-child(6){grid-column:auto}
+ .remove-participant{width:auto;white-space:nowrap}
+}
